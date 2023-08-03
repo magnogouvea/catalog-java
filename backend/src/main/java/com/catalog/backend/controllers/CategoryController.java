@@ -1,6 +1,6 @@
 package com.catalog.backend.controller;
 
-import com.catalog.backend.entities.Category;
+import com.catalog.backend.model.CategoryModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +14,9 @@ import java.util.List;
 @RequestMapping(value = "/categories")
 public class CategoryController {
   @GetMapping
-  public ResponseEntity<List<Category>> findAll() {
-    List<Category> list = new ArrayList<>();
-    list.add(new Category(1L, "Books"));
+  public ResponseEntity<List<CategoryModel>> findAll() {
+    List<CategoryModel> list = new ArrayList<>();
+    list.add(new CategoryModel(1L, "Books"));
     return ResponseEntity.status(HttpStatus.OK).body(list);
   }
 }
