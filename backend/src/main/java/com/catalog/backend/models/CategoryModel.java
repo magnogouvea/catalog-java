@@ -1,4 +1,4 @@
-package com.catalog.backend.model;
+package com.catalog.backend.models;
 
 import jakarta.persistence.*;
 
