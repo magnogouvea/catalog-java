@@ -1,5 +1,6 @@
 package com.catalog.backend.controllers;
 
+import com.catalog.backend.dtos.CategoryDTO;
 import com.catalog.backend.models.CategoryModel;
 import com.catalog.backend.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ public class CategoryController {
   private CategoryService service;
 
   @GetMapping
-  public ResponseEntity<List<CategoryModel>> findAll() {
-    List<CategoryModel> list = service.findAll();
+  public ResponseEntity<List<CategoryDTO>> findAll() {
+    List<CategoryDTO> list = service.findAll();
     return ResponseEntity.status(HttpStatus.OK).body(list);
   }
 }
